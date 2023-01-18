@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body> 
+    
+    <div id="box-1">
+       <h1 style="text-align: center;"> GRADING SYSTEM</h1>
+       <input type="text" placeholder="Enter your score..." style="height: 7vh;"
+       id="scoreInput">
+    <button
+        style="background-color: black; color: white; padding: 20px; border-radius: 10px
+         "onclick="grade()">GRADE</button>
+         <p id="result" style="font-size: 50pt; text-align: center;"></p>
+         </div>
+
+    <script>
+       var name = "Dorcas";
+       var age = 20;
+
+       
+       function grade () {
+              var scores = scoreInput.value;
+            if (scores == "") {
+                result.innerText = "empty";
+                result.style.color = "red";
+            } 
+            else if (scores <= 39){
+                result.innerText = "FAILED";
+                result.style.color = "red";
+             } 
+             else if (scores <= 49){
+                 result.innerText = "PASS";
+                 result.style.color = "yellow";
+             }
+              else if (scores <= 59){
+                result.innerText = "GOOD";
+                result.style.color ="orange";
+             } 
+             else if (scores <= 69){
+                  result.innerText = "VERY GOOD";
+                  result.style.color = "blue";
+             } 
+              else if (scores >= 70){
+                  result.innerText = "Excellent";
+                  result.style.color = "green";
+             } else {
+                result.innerText = "PLEASE ENTER A NUMBER"
+                result.style.color = "purple"
+             }
+             
+            }       
+        
+
+
+       // 18 = You are now an adult
+       // below 18 = You are still a small child
+       //above 18 = na adult you be
+
+
+
+       //if (age == "18") {
+           // alert("You are now an adult")
+       //} else if (age < 18) {
+           // alert("You are still a small child")
+      // } else if (age > 18) {
+       // alert("Na adult you be! Twale!!")
+       //} else {
+          //alert("so pe o ti lo")
+       //}
+   </script>
+</body>
+</html>
